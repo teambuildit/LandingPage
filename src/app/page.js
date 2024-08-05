@@ -2,7 +2,19 @@ import React from "react";
 import Image from "next/image";
 import heroimg from "../../public/img.PNG";
 import Card from "./components/card";
+import { motion } from "framer-motion";
 const Home = () => {
+  // Animation variants
+  const heroVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1.5, // Animation duration in seconds
+      },
+    },
+  };
+
   return (
     <div className="flex flex-col bg-slate-200">
       <div className="mx-32 my-12">
