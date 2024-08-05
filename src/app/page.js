@@ -6,7 +6,9 @@ const Home = () => {
   return (
     <div className="flex flex-col bg-slate-200">
       <div className="mx-32 my-12">
-        <h3 className="text-sky-400 text-sm italic font-semibold">Want a habit?</h3>
+        <h3 className="text-sky-400 text-sm italic font-semibold">
+          Want a habit?
+        </h3>
         <h1 className="text-4xl font-bold text-sky-600 m">BUILDIT</h1>
       </div>
 
@@ -30,7 +32,7 @@ const Home = () => {
             <br />
             and celebrate your wins. It is easy to use, beautifully designed,
             <br />
-            and free.
+            and made to help you succeed.
           </p>
           <div className="flex items-center justify-start gap-6">
             <input
@@ -40,6 +42,13 @@ const Home = () => {
             <button className="bg-blue-400 border rounded-xl py-4 px-4  hover:bg-blue-500 active:bg-blue-600 ">
               Join Waitlist
             </button>
+          </div>
+          <div>
+            <p className="text-sm text-cyan-600 font-semibold italic mt-4">
+              Early members will get exclusive
+              <br />
+              access to premium features.
+            </p>
           </div>
         </div>
       </div>
