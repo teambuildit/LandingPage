@@ -40,7 +40,17 @@ const Home = () => {
         </div>
       </div>
       {/* features div */}
-      <div></div>
+      <div className="flex flex-col justify-center items-start mt-8">
+        <h1 className="text-2xl text-blue-700 mx-16 font-bold my-4">
+          Why BuildIT?
+        </h1>
+        <div className="features">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
     </div>
   );
 };
