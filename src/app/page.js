@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import heroimg from "../../public/img.PNG";
-
+import Card from "./components/card";
 const Home = () => {
   return (
     <div className="flex flex-col bg-slate-200">
-      <div className="text-4xl font-bold text-sky-600 mx-16 my-12">BUILDIT</div>
+      <div className="text-4xl font-bold text-sky-600 mx-32 my-12">BUILDIT</div>
       {/* hero div */}
       <div className="hero flex justify-center items-start gap-12">
         <Image
@@ -31,24 +31,32 @@ const Home = () => {
           <div className="flex items-center justify-start gap-6">
             <input
               placeholder="Email Address"
-              className="border rounded-xl shadow-lg py-4 px-2 bg-slate-200 placeholder-slate-600 focus:border-slate-600"
+              className="border rounded-xl shadow-lg py-4 px-2 bg-slate-200 placeholder-slate-600 "
             />
-            <button className="bg-blue-400 border rounded-xl py-4 px-4 ">
+            <button className="bg-blue-400 border rounded-xl py-4 px-4  hover:bg-blue-500 active:bg-blue-600 ">
               Join Waitlist
             </button>
           </div>
         </div>
       </div>
       {/* features div */}
-      <div className="flex flex-col justify-center items-start mt-8">
-        <h1 className="text-2xl text-blue-700 mx-16 font-bold my-4">
+      <div className="flex flex-col justify-center mt-8">
+        <h1 className="text-2xl text-sky-600 mx-16 font-bold my-4 ml-36 ">
           Why BuildIT?
         </h1>
-        <div className="features">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+        <div className="features flex items-center justify-center gap-10 mt-4 mb-10">
+          <Card
+            title="Set meaningful goals"
+            body="Define your vision of success and set goals that align with it. Our tools help you create a clear plan and hold yourself accountable. "
+          />
+          <Card
+            title="Track your progress"
+            body="  Our easy-to-use habit tracker shows your progress over time. You can see how far you've come and what needs improvement."
+          />
+          <Card
+            title="Create SMART habits"
+            body="Utilize our SMART criteria to build habits that are Specific, Measurable, Achievable, Relevant, and Time-bound."
+          />
         </div>
       </div>
     </div>
