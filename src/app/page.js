@@ -1,20 +1,35 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import heroimg from "../../public/img.png";
 import Header from "./components/header";
 import Features from "./components/features";
 import Footer from "./components/footer";
 import { motion } from "framer-motion";
+import { supabase } from "../../lib/supabaseClient.js";
 const Home = () => {
-  // Animation variants
-  const heroVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 1.5, // Animation duration in seconds
-      },
-    },
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const isValidEmail = (email) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  };
+
+  const handleJoinWaitlist = async () => {
+    if (!isValidEmail(email)) {
+      setMessage("Please enter a valid email address");
+      return;
+    }
+    const { data, error } = await supabase.from("waitlist").insert([{ email }]);
+
+    if (error) {
+      setMessage("There was an error. Please try again.");
+      console.log("Error inserting email:", error);
+    } else {
+      setMessage("Thank you for joining the waitlist!!");
+      setEmail("");
+    }
   };
 
   return (
@@ -47,12 +62,25 @@ const Home = () => {
           </p>
           <div className="flex flex-col md:flex-row items-center justify-start gap-6">
             <input
+              type="email"
               placeholder="Email Address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="border rounded-xl shadow-lg py-4 px-2 bg-slate-200 placeholder-slate-600 "
             />
-            <button className="bg-blue-400 border rounded-xl py-4 px-4  hover:bg-blue-500 active:bg-blue-600 ">
+            <button
+              onClick={handleJoinWaitlist}
+              className="bg-blue-400 border rounded-xl py-4 px-4  hover:bg-blue-500 active:bg-blue-600 "
+            >
               Join Waitlist
             </button>
+          </div>
+          <div>
+            {message && (
+              <div className="mt-4 text-center text-sm font-bold text-blue-800 ">
+                {message}
+              </div>
+            )}
           </div>
           <div>
             <p className="text-sm text-cyan-600 font-semibold italic mt-4">
