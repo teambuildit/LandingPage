@@ -2,7 +2,7 @@ import React from "react";
 import Card from "./card.jsx";
 const Features = () => {
   return (
-    <div className="flex flex-col justify-center mt-8">
+    <div className="flex flex-col justify-center my-8">
       <h1 className="text-2xl text-sky-600 mx-16 font-bold my-4 ml-36 ">
         Why BuildIT?
       </h1>

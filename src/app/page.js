@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import heroimg from "../../public/img.png";
-import Card from "./components/card";
+import Header from "./components/header";
 import Features from "./components/features";
 import Footer from "./components/footer";
 import { motion } from "framer-motion";
@@ -19,15 +19,9 @@ const Home = () => {
 
   return (
     <div className="flex flex-col bg-slate-200">
-      <div className="mx-32 my-12">
-        <h3 className="text-sky-400 text-sm italic font-semibold">
-          Want a habit?
-        </h3>
-        <h1 className="text-4xl font-bold text-sky-600 m">BUILDIT</h1>
-      </div>
-
+      <Header />
       {/* hero div */}
-      <div className="hero flex justify-center items-start gap-16">
+      <div className="hero flex justify-center items-start gap-16  border rounded-lg">
         <Image
           src={heroimg}
           alt="hero image"
