@@ -32,13 +32,13 @@ const Home = () => {
           />
         </div>
 
-        <div className="flex flex-col items-center text-blue-900 my-6 md:my-12">
-          <h1 className="text-3xl md:text-5xl font-bold text-center">
+        <div className="flex flex-col items-center md:items-start text-blue-900 my-6 md:my-12">
+          <h1 className="text-3xl md:text-5xl font-bold text-center md:text-left">
             Build better habits
             <br />
             with BuildIT
           </h1>
-          <p className=" text-base text-center md:text-lg font-semibold my-8">
+          <p className=" text-base text-center md:text-left md:text-lg font-semibold my-8">
             BuildIT helps you set goals, track your progress,
             <br className="hidden md:block" />
             and celebrate your wins. It is easy to use, beautifully designed,
