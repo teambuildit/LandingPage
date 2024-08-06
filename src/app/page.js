@@ -38,7 +38,7 @@ const Home = () => {
             <br />
             with BuildIT
           </h1>
-          <p className=" text-base text-center md:text-left md:text-lg font-semibold my-8">
+          <p className=" text-base text-center md:text-left md:text-lg font-semibold mx-12 md:mx-0 my-8">
             BuildIT helps you set goals, track your progress,
             <br className="hidden md:block" />
             and celebrate your wins. It is easy to use, beautifully designed,
