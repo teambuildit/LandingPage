@@ -3,10 +3,10 @@ import Card from "./card.jsx";
 const Features = () => {
   return (
     <div className="flex flex-col justify-center my-8">
-      <h1 className="text-2xl text-sky-600 mx-16 font-bold my-4 ml-36 ">
+      <h1 className="text-2xl text-sky-600 mx-28 font-bold my-4 md:ml-36 ">
         Why BuildIT?
       </h1>
-      <div className="features flex items-center justify-center gap-10 mt-4 mb-10">
+      <div className=" mx-16 features flex flex-col md:flex-row items-center justify-center gap-10 mt-4 mb-10">
         <Card
           title="Set meaningful goals"
           body="Define your vision of success and set goals that align with it. Our tools help you create a clear plan and hold yourself accountable. "

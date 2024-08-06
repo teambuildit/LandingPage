@@ -21,28 +21,31 @@ const Home = () => {
     <div className="flex flex-col bg-slate-200">
       <Header />
       {/* hero div */}
-      <div className="hero flex justify-center items-start gap-16  border rounded-lg">
-        <Image
-          src={heroimg}
-          alt="hero image"
-          width={250}
-          height={500}
-          className="border rounded-lg"
-        ></Image>
-        <div className="flex flex-col text-blue-900 my-12">
-          <h1 className="text-5xl font-bold">
+      <div className="hero flex flex-col md:flex-row justify-center items-center md:items-start gap-8 md:gap-16 border">
+        <div className="hidden sm:block">
+          <Image
+            src={heroimg}
+            alt="hero image"
+            width={250}
+            height={500}
+            className="border rounded-lg"
+          />
+        </div>
+
+        <div className="flex flex-col items-center text-blue-900 my-6 md:my-12">
+          <h1 className="text-3xl md:text-5xl font-bold text-center">
             Build better habits
             <br />
             with BuildIT
           </h1>
-          <p className="text-lg font-semibold my-8">
+          <p className=" text-base text-center md:text-lg font-semibold my-8">
             BuildIT helps you set goals, track your progress,
-            <br />
+            <br className="hidden md:block" />
             and celebrate your wins. It is easy to use, beautifully designed,
-            <br />
+            <br className="hidden md:block" />
             and made to help you succeed.
           </p>
-          <div className="flex items-center justify-start gap-6">
+          <div className="flex flex-col md:flex-row items-center justify-start gap-6">
             <input
               placeholder="Email Address"
               className="border rounded-xl shadow-lg py-4 px-2 bg-slate-200 placeholder-slate-600 "
