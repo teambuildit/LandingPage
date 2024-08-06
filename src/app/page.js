@@ -7,6 +7,7 @@ import Features from "./components/features";
 import Footer from "./components/footer";
 import { motion } from "framer-motion";
 import { supabase } from "../../lib/supabaseClient.js";
+import { ReactTyped } from "react-typed";
 const Home = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -49,10 +50,22 @@ const Home = () => {
 
         <div className="flex flex-col items-center md:items-start text-blue-900 my-6 md:my-12">
           <h1 className="text-3xl md:text-5xl font-bold text-center md:text-left">
-            Build better habits
-            <br />
-            with BuildIT
+            <ReactTyped
+              strings={["Build better habits"]}
+              typeSpeed={40}
+              backSpeed={60}
+              showCursor={false}
+            />
           </h1>
+          <h1 className="text-3xl md:text-5xl font-bold text-center md:text-left">
+            <ReactTyped
+              strings={["with BUILDIT"]}
+              typeSpeed={50}
+              startDelay={1600}
+              showCursor={false}
+            />
+          </h1>
+
           <p className=" text-base text-center md:text-left md:text-lg font-semibold mx-12 md:mx-0 my-8">
             BuildIT helps you set goals, track your progress,
             <br className="hidden md:block" />
