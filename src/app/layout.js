@@ -15,7 +15,7 @@ export const metadata = {
     url: "https://buildit-habitracker.netlify.app/",
     images: [
       {
-        url: { image },
+        url: image.src,
         width: 1200,
         height: 630,
         alt: "BuildIt - Habit Tracker",
@@ -28,7 +28,7 @@ export const metadata = {
     title: "BuildIt",
     description:
       "Application that helps you build your habits and shape your life",
-    images: [{ image }],
+    images: [{ url: image.src }],
   },
 };
 
