@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import image from "../../public/image.png";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -15,7 +15,7 @@ export const metadata = {
     url: "https://buildit-habitracker.netlify.app/",
     images: [
       {
-        url: image.src,
+        url: "https://buildit-habitracker.netlify.app/image.png",
         width: 1200,
         height: 630,
         alt: "BuildIt - Habit Tracker",
@@ -28,7 +28,7 @@ export const metadata = {
     title: "BuildIt",
     description:
       "Application that helps you build your habits and shape your life",
-    images: [{ url: image.src }],
+    images: [{ url: "https://buildit-habitracker.netlify.app/image.png" }],
   },
 };
 
